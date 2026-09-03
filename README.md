@@ -19,8 +19,8 @@ Team-developed chess application written in C with a graphical interface, move v
 ### 🤖 SEDS Rover Project
 Computer Programmer for the SEDS at UC Irvine Rover Project, contributing to software development and integration for a student-built rover.
 
-### 🔐 Encrypted Diary
-Java application focused on object-oriented software design and secure diary management.
+### 🧮 Zim Computer Algebraic System
+Computer algebra project focused on symbolic mathematical computation and programmatic manipulation of mathematical expressions.
 
 ## 🎓 Education
 
@@ -31,4 +31,5 @@ Dean's Honor List
 
 ## 📫 Connect With Me
 
-[LinkedIn](https://www.linkedin.com/in/hamza-vaid/)
+- 📧 Email: [hamzavaid@gmail.com](mailto:hamzavaid@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/hamza-vaid](https://www.linkedin.com/in/hamza-vaid/)
