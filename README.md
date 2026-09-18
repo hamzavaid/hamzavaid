@@ -2,9 +2,9 @@
 
 # Hi, I'm Hamza Vaid
 
-### Computer Engineering @ UC Irvine | Software Engineer | Systems • Embedded • DSP • Full-Stack
+### Computer Engineering @ UC Irvine | Software Engineer | Systems • Simulation • Infrastructure • Embedded • DSP
 
-I build engineering software across **systems, networking, embedded integration, signal processing, backend infrastructure, and data-intensive applications**.
+I build engineering software across **systems programming, distributed infrastructure, scientific simulation, signal processing, embedded integration, and applied data/ML systems**.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Vaid-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/hamza-vaid/)
 [![GitHub](https://img.shields.io/badge/GitHub-hamzavaid-181717?style=flat&logo=github)](https://github.com/hamzavaid)
@@ -16,18 +16,18 @@ I build engineering software across **systems, networking, embedded integration,
 
 ## About Me
 
-I'm a **Computer Engineering student at the University of California, Irvine**, graduating in **2027**, with a **3.787 GPA** and Dean's Honor List recognition.
+I'm a **Computer Engineering student at the University of California, Irvine**, graduating in **2027**, with a **3.818 GPA** and Dean's Honor List recognition.
 
 My work spans:
 
-- **Systems programming** — C/C++, Linux, POSIX sockets, concurrency, synchronization, observability, benchmarking, and sanitizer-backed verification
-- **Backend & infrastructure** — Go, Python, FastAPI, PostgreSQL, Redis Streams, Docker, REST APIs, asynchronous workers, and container isolation
-- **Embedded & hardware/software integration** — Raspberry Pi, Arduino, serial communications, motor control, instrumentation, and robotics
-- **Signal processing & scientific computing** — Radar/Sonar simulation, matched filtering, CA-CFAR, Doppler processing, Kalman tracking, NumPy, and SciPy
-- **Full-stack software engineering** — React, Next.js, TypeScript, Node.js, APIs, automated testing, debugging, and technical documentation
-- **Applied AI/ML & data engineering** — clinical NLP, PHI de-identification, healthcare data pipelines, and explainable prediction systems
+- **Systems & performance engineering** — C/C++, Linux, POSIX sockets, concurrency, thread pools, synchronization, profiling, benchmarking, observability, and sanitizer-backed verification
+- **Backend & distributed infrastructure** — Go, Python, FastAPI, PostgreSQL, Redis Streams, Docker, Kubernetes, asynchronous workers, transactional outbox patterns, retries/DLQs, and autoscaling
+- **Scientific simulation & numerical computing** — deterministic simulation architecture, numerical integration, N-body mechanics, engineering diagnostics, OpenGL visualization, NumPy, and SciPy
+- **Signal processing & estimation** — Radar/Sonar simulation, matched filtering, CA-CFAR, Doppler processing, Kalman filtering, multi-target tracking, and data association
+- **Embedded & hardware/software integration** — Raspberry Pi, Arduino, serial communications, motor control, instrumentation, digital systems, and robotics
+- **Applied AI/ML & data engineering** — clinical NLP, PHI de-identification, healthcare data pipelines, structured medical data, and explainable prediction systems
 
-I am especially interested in **systems software, embedded/firmware, computer architecture, robotics, networking, signal processing, infrastructure, and high-performance engineering software**.
+I am especially interested in **systems software, simulation, infrastructure, embedded/firmware, robotics, networking, computer architecture, signal processing, and high-performance engineering software**.
 
 ---
 
@@ -37,20 +37,39 @@ I am especially interested in **systems software, embedded/firmware, computer ar
 <tr>
 <td width="50%" valign="top">
 
-### [Online Coding Judge](https://github.com/hamzavaid/Online-Coding-Judge)
+### [Aetherion](https://github.com/hamzavaid/Aetherion)
 
-**Go • PostgreSQL • Redis Streams • Docker • React/Next.js • Linux**
+**C++20 • OpenGL • CMake/CTest • Numerical Methods • Simulation**
 
-Full-stack online programming judge with authenticated workflows and asynchronous Python/C++ code execution.
+Interactive deterministic 3D mechanics simulator with a testable double-precision physics core and engineering-focused desktop interface.
 
-- Go/Gin backend with PostgreSQL persistence via pgx
-- Redis Streams queue with dedicated judge worker
-- Python and C++23 execution inside isolated Docker containers
-- cgroups-v2-aware memory controls, disabled networking, dropped capabilities, read-only root filesystems, and bounded resources
-- Role-based access, rate limiting, hidden tests, persisted verdicts, and owner-only results
-- Integration, security, sandbox, race-detector, frontend, and production-build testing
+- Newtonian **N-body gravity** with SI-valued double-precision simulation state
+- Runtime-selectable **Semi-Implicit Euler, Velocity Verlet, and RK4** integrators
+- Orbit regression tests plus energy and momentum error diagnostics
+- Camera-relative instanced OpenGL rendering for small and astronomical scales
+- Scene picking, adaptive engineering grid, trails, checkpoints, and state restoration
+- Renderer-optional/headless builds and cross-platform Linux/WSL2/Windows guidance
 
 </td>
+<td width="50%" valign="top">
+
+### [Online Coding Judge](https://github.com/hamzavaid/Online-Coding-Judge)
+
+**Go • PostgreSQL • Redis Streams • Docker • Kubernetes • Next.js**
+
+Full-stack programming judge with authenticated workflows and asynchronous Python/C++ code execution.
+
+- Go/Gin backend with PostgreSQL persistence and Redis Streams
+- Isolated Python/C++23 execution with non-root containers and bounded resources
+- Transactional outbox, worker leases, stale-worker fencing, retries, and dead-letter handling
+- Horizontally concurrent workers with Kubernetes deployment and **HPA scaling from 3–30 replicas**
+- Default-deny networking, digest-pinned images, TLS ingress, rate limits, and CI image scanning
+- Backend, Redis, execution, sandbox/security, race-detector, frontend, and deployment tests
+
+</td>
+</tr>
+
+<tr>
 <td width="50%" valign="top">
 
 ### [Multithreaded C++ HTTP Server](https://github.com/hamzavaid/multithreaded-cpp-server)
@@ -59,17 +78,14 @@ Full-stack online programming judge with authenticated workflows and asynchronou
 
 HTTP/1.1 subset server built to compare sequential, thread-per-client, and bounded thread-pool architectures.
 
-- Producer-consumer socket queue with mutexes and condition variables
-- Timeouts, graceful shutdown, RAII ownership, `/health` and `/metrics`
-- Structured JSON logs, latency histograms, throughput, and queue metrics
-- Six unit/integration/concurrency/fault-injection suites
+- Bounded producer-consumer socket queue using mutexes and condition variables
+- Timeouts, graceful shutdown, RAII ownership, `/health`, `/compute`, `/sleep`, and `/metrics`
+- Structured JSON logging, throughput metrics, latency histograms, and queue-depth observability
 - Debug, Release, ASan/UBSan, and TSan verification automation
-- **72 passing final regression-suite executions** and a **15-minute soak test handling 69,140 requests with zero reported errors**
+- **72 passing final regression-suite executions**
+- **15-minute soak test: 69,140 requests with zero reported errors**
 
 </td>
-</tr>
-
-<tr>
 <td width="50%" valign="top">
 
 ### [Echorin](https://github.com/hamzavaid/Echorin)
@@ -78,28 +94,12 @@ HTTP/1.1 subset server built to compare sequential, thread-per-client, and bound
 
 Real-time 2D Radar and Sonar signal-processing simulator with end-to-end sensing, detection, tracking, and visualization.
 
-- Delayed/attenuated/noisy echo generation with configurable waveforms
+- Delayed, attenuated, noisy echo generation with configurable waveforms
 - FFT-based matched filtering and range-profile generation
 - Fixed-threshold and **CA-CFAR** detection
-- Coherent Doppler FFT processing and radial-velocity estimation
-- Mahalanobis-gated association with constant-velocity **Kalman multi-target tracking**
-- Responsive PySide6/PyQtGraph GUI, scenario save/load, JSON/CSV export, benchmarks, and **79 automated tests**
-
-</td>
-<td width="50%" valign="top">
-
-### [Zim 2.0 Computer Algebra System](https://github.com/hamzavaid/Zim-Computer-Algebraic-System)
-
-**TypeScript • Node.js • Parsing • ASTs • Exact Arithmetic • API/GUI**
-
-Symbolic mathematics engine rebuilt around a modular TypeScript core with CLI and local web interface.
-
-- Strict tokenizer/parser and abstract syntax tree representation
-- Exact rational arithmetic and deterministic simplification
-- Linear/quadratic and selected higher-degree symbolic solving
-- Exact Gaussian elimination for simultaneous linear systems
-- Domain-aware rewrite safety and transformation tracing
-- Versioned JSON-safe API, CLI/REPL, LaTeX/MathML formatting, local web GUI, and end-to-end testing
+- Coherent Doppler processing and radial-velocity estimation
+- Mahalanobis-gated association with **Kalman multi-target tracking**
+- Responsive PySide6/PyQtGraph GUI, scenario save/load, exports, benchmarks, and **79 automated tests**
 
 </td>
 </tr>
@@ -107,30 +107,32 @@ Symbolic mathematics engine rebuilt around a modular TypeScript core with CLI an
 <tr>
 <td width="50%" valign="top">
 
-### [Anteater Poker](https://github.com/hamzavaid/anteaterpoker)
+### [Zim 2.0](https://github.com/hamzavaid/Zim-Computer-Algebraic-System)
 
-**C • Networking • Client/Server • Make • Team Software Engineering**
+**TypeScript • Node.js • Parsing • ASTs • Exact Arithmetic • API/GUI**
 
-Five-person software engineering project implementing a networked Texas Hold'em application in C.
+Symbolic mathematics engine with a modular TypeScript core, CLI, serialized API, and local web interface.
 
-- Central server synchronizes players, bots, game state, legal actions, and scoring
-- Separate client/server architecture
-- Make-based builds and release packaging
-- Functional testing, debugging, integration, specifications, and user documentation
+- Strict tokenizer/parser and abstract syntax tree representation
+- Exact rational arithmetic and deterministic simplification
+- Linear, quadratic, selected higher-degree, rational, and transcendental solving
+- Exact Gaussian elimination for simultaneous linear systems
+- Domain-aware rewrite safety and transformation tracing
+- LaTeX/MathML output, CLI/REPL, GUI workflows, and automated tests
 
 </td>
 <td width="50%" valign="top">
 
-### [Iceman Game Simulation](https://github.com/hamzavaid/Iceman-Project)
+### [Anteater Poker](https://github.com/hamzavaid/anteaterpoker)
 
-**C++ • OOP • State Management • Simulation • Debugging**
+**C • Networking • Client/Server • Make • Team Software Engineering**
 
-Multi-file C++ simulation centered on object-oriented design and a world-state/actor architecture.
+Five-person UCI software engineering project implementing a networked Texas Hold'em game with custom Anteater-themed mechanics.
 
-- Inheritance and polymorphism across an actor hierarchy
-- Entity movement, collision, spawning, resources, and state transitions
-- Deterministic simulation behavior and world-state management
-- Modular class design and cross-object debugging
+- Central server manages connected players, bots, game state, legal actions, and scoring
+- Separate client/server architecture with synchronized gameplay
+- Make-based builds and executable release packaging
+- Functional testing, debugging, software integration, specifications, and user documentation
 
 </td>
 </tr>
@@ -144,25 +146,25 @@ Multi-file C++ simulation centered on object-oriented design and a world-state/a
 
 **May 2026 – Present | Remote**
 
-Developing clinical NLP and data infrastructure that transforms hospital discharge summaries into structured healthcare data.
+Develop clinical NLP middleware that converts unstructured hospital discharge summaries into structured, coded healthcare data and supports explainable readmission-risk prediction.
 
 - Build **Python/FastAPI** backend services and integrate outputs with React
 - Develop PHI de-identification using **Presidio, spaCy/scispaCy, custom recognizers, and structural NLP**
-- Achieved approximately **0.994 synthetic PHI recall** in evaluation
+- Achieved approximately **0.994 synthetic PHI recall** in de-identification evaluation
 - Work with **OMOP, SNOMED CT, ICD-10-CM, and RxNorm**
-- Support explainable **30-day readmission-risk prediction**
-- Optimize NLP pipeline performance, including approximately **72 ms/document** de-identification processing in reported testing
+- Contribute to explainable **30-day hospital readmission-risk prediction**
+- Optimize pipeline performance, including approximately **72 ms/document** de-identification processing in reported testing
 
 ### Computer Programmer — SEDS at UC Irvine Rover Project
 
 **Oct 2025 – Jun 2026 | Irvine, CA**
 
-Contributed to an interdisciplinary student-built rover across software integration, embedded systems, and validation.
+Contributed software and integration work to a student-built rover as part of an interdisciplinary engineering team.
 
 - Worked with **C/C++, Python, Raspberry Pi, Arduino, motor control, and serial communications**
-- Integrated software with rover hardware and subsystem interfaces
-- Used Git-based development, instrumentation, iterative testing, and root-cause debugging
-- Collaborated with computer, electrical, and mechanical engineering contributors
+- Supported software development and hardware/software integration
+- Used instrumentation, iterative testing, Git-based workflows, and root-cause debugging
+- Collaborated across computer, electrical, and mechanical engineering disciplines
 
 ### Independent Software Developer
 
@@ -191,25 +193,25 @@ Built and deployed event-driven Discord applications for online communities with
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat)
 
-### Backend, Data & Infrastructure
+### Systems, Infrastructure & Reliability
 
-`Go/Gin` · `Python/FastAPI` · `Node.js` · `React` · `Next.js` · `REST APIs` · `PostgreSQL/pgx` · `Redis Streams` · `MongoDB` · `Docker` · `Authentication` · `RBAC` · `Asynchronous Workers` · `Data Engineering`
+`Linux/UNIX` · `POSIX Sockets` · `TCP/IP` · `HTTP/1.1` · `Multithreading` · `Thread Pools` · `Synchronization` · `Atomics` · `RAII` · `CMake` · `CTest` · `GDB` · `ASan` · `UBSan` · `TSan` · `Go Race Detector` · `Benchmarking` · `Stress/Soak Testing` · `Fault Injection` · `Structured Logging` · `Metrics`
 
-### Systems & Reliability
+### Backend & Distributed Systems
 
-`Linux/UNIX` · `POSIX Sockets` · `TCP/IP` · `HTTP/1.1` · `Multithreading` · `Thread Pools` · `Synchronization` · `Atomics` · `RAII` · `CMake` · `CTest` · `GDB` · `ASan` · `UBSan` · `TSan` · `Stress/Soak Testing` · `Benchmarking` · `Fault Injection` · `Structured Logging` · `Metrics`
+`Go/Gin` · `Python/FastAPI` · `Node.js` · `React` · `Next.js` · `REST APIs` · `PostgreSQL/pgx` · `Redis Streams` · `MongoDB` · `Docker` · `Kubernetes` · `Kustomize` · `HPA` · `Authentication` · `RBAC` · `Transactional Outbox` · `Retry/DLQ Workflows` · `Distributed Workers`
+
+### Simulation, DSP & Scientific Computing
+
+`OpenGL` · `Numerical Integration` · `N-Body Simulation` · `Deterministic Simulation` · `NumPy` · `SciPy` · `Radar Simulation` · `Sonar Simulation` · `Matched Filtering` · `CA-CFAR` · `Doppler FFTs` · `Kalman Filtering` · `Multi-Target Tracking` · `Mahalanobis Gating` · `PySide6` · `PyQtGraph`
 
 ### Embedded, Hardware & Robotics
 
 `Embedded Systems` · `Raspberry Pi` · `Arduino` · `Serial Communications` · `Motor Control` · `Digital Logic` · `Computer Architecture` · `Circuit Design` · `Oscilloscope` · `Logic Analyzer` · `DMM` · `Function Generator` · `Hardware/Software Integration`
 
-### Signal Processing & Scientific Computing
-
-`NumPy` · `SciPy` · `Radar Simulation` · `Sonar Simulation` · `Matched Filtering` · `Range Processing` · `CA-CFAR` · `Doppler FFTs` · `Radial-Velocity Estimation` · `Kalman Filtering` · `Multi-Target Tracking` · `Mahalanobis Gating` · `PySide6` · `PyQtGraph`
-
 ### AI, NLP & Healthcare Data
 
-`Machine Learning` · `NLP` · `Presidio` · `spaCy` · `scispaCy` · `Clinical NLP` · `PHI De-identification` · `OMOP` · `SNOMED CT` · `ICD-10-CM` · `RxNorm`
+`Machine Learning` · `NLP` · `Presidio` · `spaCy` · `scispaCy` · `Clinical NLP` · `PHI De-identification` · `OMOP` · `SNOMED CT` · `ICD-10-CM` · `RxNorm` · `Data Engineering`
 
 ---
 
@@ -217,13 +219,15 @@ Built and deployed event-driven Discord applications for online communities with
 
 ### University of California, Irvine
 
-**B.S. Computer Engineering | Expected 2027 | GPA: 3.787**
+**B.S. Computer Engineering | Expected 2027 | GPA: 3.818**
 
 **Dean's Honor List:** Fall 2025 · Winter 2026 · Spring 2026
 
-Selected coursework:
+Selected completed coursework:
 
-`Computer Systems & C` · `Digital Systems` · `Digital Logic Lab` · `Data Structures & Algorithms` · `Computer Networks` · `Organization of Digital Computers` · `Signals & Systems` · `Electronics I–III` · `Circuit/Network Analysis`
+`Computer Systems & C` · `Digital Systems` · `Digital Logic Lab` · `Data Structures & Algorithms` · `Computer Networks` · `Organization of Digital Computers` · `Discrete-Time Signals & Systems` · `Continuous-Time Signals & Systems` · `Electronics I–III` · `Circuit/Network Analysis`
+
+**Summer 2026:** 4.000 term GPA across Electronics III, Electronics III Lab, and Engineering Communications.
 
 ### El Camino College
 
@@ -237,20 +241,21 @@ Physics Academic Excellence Award · MESA · Honors Program · Dean's List
 
 ## Current Focus
 
-I'm currently deepening my portfolio in:
+I'm currently deepening my work in:
 
-- Systems and infrastructure engineering
-- Secure sandboxing and distributed/asynchronous worker systems
-- Embedded firmware and hardware/software integration
+- Performance-oriented **C++ and Go systems**
+- Distributed/asynchronous backend infrastructure
+- Secure sandboxing and containerized execution
+- Deterministic physics and engineering simulation
+- Embedded systems and hardware/software integration
 - Radar/Sonar DSP, estimation, and tracking
-- FPGA / RTL and digital hardware design
-- Operating systems and low-level Linux
-- Performance-oriented C++ and Go services
+- Computer architecture, digital hardware, and VLSI
+- Applied AI/data systems
 
 ---
 
 ### Let's Connect
 
-I'm interested in opportunities involving **computer engineering, systems software, embedded systems, backend infrastructure, robotics, networking, hardware/software integration, signal processing, and high-performance software**.
+I'm interested in opportunities involving **computer engineering, systems software, simulation, embedded systems, backend infrastructure, robotics, networking, hardware/software integration, signal processing, and high-performance software**.
 
 [LinkedIn](https://www.linkedin.com/in/hamza-vaid/) · [GitHub](https://github.com/hamzavaid) · [Email](mailto:hamzavaid@gmail.com)
