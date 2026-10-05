@@ -2,9 +2,9 @@
 
 # Hi, I'm Hamza Vaid
 
-### Computer Engineering @ UC Irvine | Software Engineer | Systems • RTL/Verification • Simulation • Embedded • DSP
+### Computer Engineering @ UC Irvine | Software Engineer | Systems • RTL/Verification • Robotics • Simulation • DSP
 
-I build engineering software across **systems programming, digital hardware verification, scientific simulation, signal processing, distributed infrastructure, embedded systems, and applied data/ML**.
+I build engineering systems across **systems programming, digital hardware verification, robotics/autonomy, scientific simulation, signal processing, distributed infrastructure, and embedded software**.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Vaid-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/hamza-vaid/)
 [![GitHub](https://img.shields.io/badge/GitHub-hamzavaid-181717?style=flat&logo=github)](https://github.com/hamzavaid)
@@ -20,19 +20,87 @@ I'm a **Computer Engineering student at the University of California, Irvine**, 
 
 My work spans:
 
-- **Systems & performance engineering** — C/C++, Linux, POSIX sockets, concurrency, thread pools, synchronization, observability, benchmarking, sanitizers, and reliability testing
-- **Digital hardware & verification** — Verilog/SystemVerilog, RISC-V/RV32I, RTL design, cocotb, architectural reference models, retirement scoreboards, Icarus Verilog, Verilator, and waveform debugging
-- **Scientific simulation & numerical computing** — deterministic simulation architecture, numerical integration, N-body mechanics, electrostatics/electromagnetics, engineering diagnostics, and OpenGL visualization
-- **Signal processing & estimation** — Radar/Sonar simulation, matched filtering, CA-CFAR, Range-Doppler processing, Kalman filtering, multi-target tracking, and data association
+- **Systems & performance engineering** — C/C++, Linux, POSIX sockets, concurrency, observability, benchmarking, sanitizers, and reliability testing
+- **Digital hardware & verification** — Verilog/SystemVerilog, RISC-V/RV32I, cocotb, architectural reference models, scoreboards, Icarus Verilog, Verilator, and waveform debugging
+- **Robotics & autonomous systems** — UAVs, robotic manipulators, embedded control, human-machine interfaces, autonomous navigation, sensing, and hardware/software integration
+- **Scientific simulation & numerical computing** — deterministic simulation, numerical integration, N-body mechanics, electromagnetics, scientific visualization, NumPy/SciPy, and OpenGL
+- **Signal processing & estimation** — Radar/Sonar simulation, array processing, matched filtering, CA-CFAR, Range-Doppler/Range-Angle processing, Kalman filtering, and multi-target tracking
 - **Backend & distributed infrastructure** — Go, Python, PostgreSQL, Redis Streams, Docker, Kubernetes, asynchronous workers, transactional outbox patterns, retries/DLQs, and autoscaling
-- **Embedded & robotics** — Raspberry Pi, Arduino, serial communications, motor control, UAV systems, ArduPilot, telemetry, and hardware/software integration
-- **Applied AI/ML & data engineering** — clinical NLP, PHI de-identification, healthcare data pipelines, structured medical data, and explainable prediction systems
+- **Applied AI/ML & data engineering** — clinical NLP, PHI de-identification, healthcare data pipelines, and explainable prediction systems
 
-I am especially interested in **systems software, computer architecture, RTL/verification, simulation, embedded/firmware, robotics, networking, signal processing, and high-performance engineering software**.
+I am especially interested in **systems software, computer architecture, RTL/verification, robotics, embedded/firmware, simulation, autonomous systems, networking, signal processing, and high-performance engineering software**.
 
 ---
 
-## Featured Projects
+## Current Academic & Robotics Projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### MIMIC — Motion-Interpreted Manipulation and Intelligent Control
+
+**Senior Design • Wearable Sensing • Computer Vision • Robotics • Control**
+
+Platform-agnostic human-motion interpretation and safe-control system for mapping multimodal human state into commands for cyber-physical systems.
+
+- Wearable finger sensing, IMU orientation, and vision/depth-based motion estimation
+- MediaPipe/OpenCV-based tracking with multimodal sensor-fusion architecture
+- Safe abstract command layer separated from device-specific control
+- Robotic-arm MVP with teleoperation, IK, trajectory limits, and safety supervision; drone/rover adapters as extensions
+
+</td>
+<td width="50%" valign="top">
+
+### EECS 195 — Autonomous UAV Project
+
+**ArduPilot • ESP32/ExpressLRS • GPS • Telemetry • Embedded Systems**
+
+Hands-on team project building and flying a complete UAV from avionics and power systems through autonomous missions.
+
+- Flight-controller configuration, radio control, failsafes, batteries, ESCs, and brushless motors
+- GPS and positioning systems with telemetry to a ground-control station
+- Autonomous **takeoff → waypoint → autoland** mission development
+- Advanced project path includes **LLM-in-the-loop agentic control** and **vision-based navigation**
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### [IEEE at UCI Micromouse](https://ieee.ics.uci.edu/micromouse/mm_index.html)
+
+**Embedded C/C++ • PCB Design • Sensors • Autonomous Navigation**
+
+Year-long autonomous maze-solving robot project covering the full embedded hardware/software development cycle.
+
+- PCB and embedded-electronics development
+- Microcontroller programming, sensing, soldering, and physical integration
+- Autonomous navigation and maze-solving behavior
+- Iterative testing and preparation for Micromouse competition
+
+</td>
+<td width="50%" valign="top">
+
+### Robotics at UCI — ZotBotics Level 2
+
+**6-Axis Robot Arm • Embedded Systems • 3D Printing • Automation**
+
+Six-person team project designing and building a six-axis 3D-printed robotic arm from scratch.
+
+- Mechanical and embedded-system integration
+- Multi-axis robot programming and control
+- Custom manufactured/3D-printed manipulator components
+- Technical sorting and industrial-style automation competition tasks
+
+</td>
+</tr>
+</table>
+
+---
+
+## Featured Software & Engineering Projects
 
 <table>
 <tr>
@@ -42,12 +110,12 @@ I am especially interested in **systems software, computer architecture, RTL/ver
 
 **C++20 • OpenGL • CMake/CTest • Numerical Methods • Physics Simulation**
 
-Interactive deterministic 3D mechanics and field simulator with a testable double-precision physics core.
+Interactive deterministic 3D mechanics and electromagnetic-field simulator.
 
 - Newtonian **N-body gravity**, Coulomb electrostatics, and Lorentz-force dynamics
 - Runtime-selectable **Semi-Implicit Euler, Velocity Verlet, RK4, and Boris integration**
-- Electric, magnetic, and gravity vector-field visualization with field-line tracing
-- Engineering diagnostics, checkpointable state, versioned scene persistence, and camera-relative OpenGL rendering
+- Electric, magnetic, and gravity field sampling/tracing with scientific probes and magnitude heatmaps
+- Camera-relative rendering, configurable reference frames, diagnostics, plotting, checkpoints, and interactive body/probe manipulation
 
 </td>
 <td width="50%" valign="top">
@@ -59,7 +127,7 @@ Interactive deterministic 3D mechanics and field simulator with a testable doubl
 Incremental verification environment for a scoped RV32I teaching processor.
 
 - Independent Python architectural model and **instruction-retirement scoreboard**
-- Directed arithmetic, logic, memory, branch, and jump program verification
+- Directed arithmetic, logic, memory, branch, and jump verification
 - Checks PC, instruction, register writeback, memory transactions, and trap status at every retirement
 - Optional **VCD/FST waveforms**, JSON failure traces, GTKWave debugging, and dual-simulator workflows
 
@@ -75,7 +143,7 @@ Incremental verification environment for a scoped RV32I teaching processor.
 
 Full-stack programming judge with authenticated workflows and sandboxed Python/C++ execution.
 
-- Isolated execution with cgroup-aware resource limits and hardened containers
+- Hardened container execution with cgroup-aware CPU/memory/process controls
 - Transactional outbox, worker leases, stale-worker fencing, retries, and dead-letter handling
 - Horizontally concurrent workers with **Kubernetes HPA scaling from 3–30 replicas**
 - Backend, Redis, execution, sandbox/security, race-detector, frontend, and deployment testing
@@ -83,16 +151,16 @@ Full-stack programming judge with authenticated workflows and sandboxed Python/C
 </td>
 <td width="50%" valign="top">
 
-### [Echorin v1.1](https://github.com/hamzavaid/Echorin)
+### [Echorin v1.3](https://github.com/hamzavaid/Echorin)
 
 **Python • NumPy • SciPy • PySide6 • Radar/Sonar DSP • Tracking**
 
-Real-time Radar and Sonar simulator with end-to-end sensing, detection, tracking, and engineering visualization.
+Real-time Radar and Sonar simulator with array sensing, detection, tracking, and engineering visualization.
 
-- FFT matched filtering, **CA-CFAR**, coherent Doppler processing, and radial-velocity estimation
-- Mahalanobis-gated association with **Kalman multi-target tracking**
-- Full **Range-Doppler heatmap**, track velocity/covariance overlays, and measurement inspection
-- Dockable responsive PySide6/PyQtGraph workspace with persistent layouts, themes, replay/export, and benchmarks
+- FFT matched filtering, **CA-CFAR**, coherent Doppler processing, and Kalman multi-target tracking
+- Eight-element receiver array with **Bartlett range-angle processing** and signal-derived bearings
+- Full **Range-Doppler and Range-Angle** engineering views with track/covariance inspection
+- Moving sensor platforms with rigid-body receiver mounts, multiple motion models, moving-receiver Doppler, and PPI path/heading overlays
 
 </td>
 </tr>
@@ -106,7 +174,7 @@ Real-time Radar and Sonar simulator with end-to-end sensing, detection, tracking
 
 HTTP/1.1 subset server comparing sequential, thread-per-client, and bounded worker-pool architectures.
 
-- Bounded producer-consumer socket queue with mutexes and condition variables
+- Bounded producer-consumer queue with mutexes and condition variables
 - Deadlines, graceful shutdown, RAII ownership, structured logging, metrics, and fault injection
 - Debug, Release, **ASan/UBSan**, and **TSan** verification automation
 - **72 passing final regression-suite executions** and a **15-minute soak test with 69,140 requests and zero reported errors**
@@ -114,16 +182,16 @@ HTTP/1.1 subset server comparing sequential, thread-per-client, and bounded work
 </td>
 <td width="50%" valign="top">
 
-### [Zim 2.5](https://github.com/hamzavaid/Zim-Computer-Algebraic-System)
+### [Zim 2.5.3](https://github.com/hamzavaid/Zim-Computer-Algebraic-System)
 
-**TypeScript • Parsing/ASTs • Symbolic Algebra • Calculus • API/GUI**
+**TypeScript • ASTs • Symbolic Algebra • Calculus • Scientific Computing**
 
-Computer algebra system with exact symbolic manipulation, certified analysis, calculus, CLI, and graphical interfaces.
+Computer algebra system with exact symbolic manipulation, certified analysis, numerical calculus, and graphical/CLI interfaces.
 
-- Exact rational arithmetic, deterministic simplification, equations, inequalities, and systems
-- Certified polynomial root analysis, nonlinear-system strategies, and typed solution sets
+- Exact arithmetic, deterministic simplification, equations, inequalities, nonlinear systems, and certified polynomial analysis
 - Symbolic differentiation, conservative limits, verified symbolic integration, and **arbitrary-precision numerical quadrature**
 - Versioned API, derivation graphs, CLI/REPL, MathML/LaTeX rendering, browser tests, and benchmarks
+- Integrated **scientific calculator** with exact/decimal modes, degrees/radians, `Ans`, persistent history, factorial/logarithms, constants, and native MathML output
 
 </td>
 </tr>
@@ -133,11 +201,11 @@ Computer algebra system with exact symbolic manipulation, certified analysis, ca
 
 ## Additional Projects
 
-- **[Kairo](https://github.com/hamzavaid/Kairo-Discord-Bot)** — TypeScript Discord music/entertainment platform under reconstruction with a reusable `@kairo/music-engine` API, strict workspace boundaries, tooling, and an early canonical-track parser
-- **RISC-V Single-Cycle Processor** — 32-bit processor implemented in Verilog with ALU, register file, memories, datapath/control logic, testbenches, and waveform-based verification
+- **[Kairo](https://github.com/hamzavaid/Kairo-Discord-Bot)** — TypeScript Discord music platform with a reusable `@kairo/music-engine`, YouTube/Spotify/MusicBrainz metadata adapters, cross-provider matching, per-guild queues, Discord voice playback, yt-dlp/FFmpeg streaming, MongoDB-backed playlists/liked songs, collection import, and interactive Discord library controls
+- **RISC-V Single-Cycle Processor** — 32-bit Verilog processor with ALU, register file, memories, datapath/control logic, testbenches, and waveform-based verification
 - **[Anteater Poker](https://github.com/hamzavaid/anteaterpoker)** — Five-person C networking project implementing a synchronized client/server Texas Hold'em game with custom mechanics
 - **[Iceman](https://github.com/hamzavaid/Iceman-Project)** — Multi-file C++ simulation/game project using inheritance, polymorphism, world-state management, collision logic, and modular class design
-- **[Vote Bot](https://github.com/hamzavaid/Vote-Bot)** — Node.js/Discord.js command-based voting bot with dynamic command loading, permissions, cooldowns, and event-driven state management
+- **[Vote Bot](https://github.com/hamzavaid/Vote-Bot)** — Node.js/Discord.js voting bot with dynamic command loading, permissions, cooldowns, and event-driven state management
 
 ---
 
@@ -206,15 +274,19 @@ Built and deployed event-driven Discord applications for online communities with
 
 ### Backend & Distributed Systems
 
-`Go/Gin` · `Python/FastAPI` · `Node.js` · `React` · `Next.js` · `REST APIs` · `PostgreSQL/pgx` · `Redis Streams` · `MongoDB` · `Docker` · `Kubernetes` · `Kustomize` · `HPA` · `Authentication` · `RBAC` · `Transactional Outbox` · `Retry/DLQ Workflows` · `Distributed Workers`
+`Go/Gin` · `Python/FastAPI` · `Node.js` · `React` · `Next.js` · `REST APIs` · `PostgreSQL/pgx` · `Redis Streams` · `MongoDB/Mongoose` · `Docker` · `Kubernetes` · `Kustomize` · `HPA` · `Authentication` · `RBAC` · `Transactional Outbox` · `Retry/DLQ Workflows` · `Distributed Workers`
 
 ### Simulation, DSP & Scientific Computing
 
-`OpenGL` · `Numerical Integration` · `N-Body Simulation` · `Coulomb Electrostatics` · `Lorentz Dynamics` · `Boris Integration` · `Vector Fields` · `Field-Line Tracing` · `NumPy` · `SciPy` · `Radar/Sonar Simulation` · `Matched Filtering` · `CA-CFAR` · `Range-Doppler Processing` · `Kalman Filtering` · `Multi-Target Tracking` · `Mahalanobis Gating` · `PySide6` · `PyQtGraph`
+`OpenGL` · `Numerical Integration` · `N-Body Simulation` · `Coulomb Electrostatics` · `Lorentz Dynamics` · `Boris Integration` · `Scientific Probes` · `Field-Line Tracing` · `NumPy` · `SciPy` · `Radar/Sonar Simulation` · `Receiver Arrays` · `Bartlett Processing` · `Matched Filtering` · `CA-CFAR` · `Range-Doppler` · `Range-Angle` · `Kalman Filtering` · `Multi-Target Tracking` · `PySide6` · `PyQtGraph`
 
-### Embedded, Robotics & UAVs
+### Embedded, Robotics & Autonomous Systems
 
-`Embedded Systems` · `Raspberry Pi` · `Arduino` · `ESP32` · `Serial Communications` · `UART` · `PWM` · `Motor Control` · `ArduPilot` · `Flight Controllers` · `ExpressLRS` · `GPS` · `UAV Telemetry` · `Ground-Control Stations` · `LiDAR/Sonar/Optical Flow` · `Hardware/Software Integration`
+`Embedded Systems` · `Raspberry Pi` · `Arduino` · `ESP32` · `Serial Communications` · `UART` · `PWM` · `Motor Control` · `ArduPilot` · `Flight Controllers` · `ExpressLRS` · `GPS` · `UAV Telemetry` · `Ground-Control Stations` · `PCB/Embedded Integration` · `Autonomous Navigation` · `Hardware/Software Integration`
+
+### Media, APIs & Event-Driven Applications
+
+`Discord.js` · `@discordjs/voice` · `YouTube Data API` · `Spotify API` · `MusicBrainz API` · `yt-dlp` · `FFmpeg` · `Metadata Normalization` · `Voice Playback` · `Slash Commands` · `Interactive Components` · `Persistent Playlists`
 
 ### AI, NLP & Healthcare Data
 
@@ -238,7 +310,7 @@ Selected completed coursework:
 
 `Organization of Digital Computers Lab` · `Data & Knowledge Science` · `VLSI` · `Electrical Engineering Analysis` · `Senior Design I` · `Drones/UAV Systems`
 
-The Drones course is a hands-on build-and-flight course covering **ArduPilot, flight controllers, ESP32/ExpressLRS, power systems, GPS/positioning, telemetry, autonomous waypoint missions, Remote ID, and UTM concepts**.
+Current hands-on work includes **MIMIC senior design**, an **ArduPilot UAV build/autonomy project**, **IEEE Micromouse**, and a **six-axis ZotBotics robotic arm**.
 
 ### El Camino College
 
@@ -254,20 +326,21 @@ Physics Academic Excellence Award · MESA · Honors Program · Dean's List
 
 I'm currently deepening my work in:
 
+- Multimodal **human-motion interpretation and robotic teleoperation** through MIMIC
+- **Autonomous UAV systems** with ArduPilot, sensing, telemetry, and navigation
+- Embedded autonomous robotics through **Micromouse**
+- **Six-axis manipulator** design and industrial-style automation through ZotBotics
 - **RTL design and verification** with RISC-V, SystemVerilog, cocotb, and architectural scoreboarding
 - Performance-oriented **C++ and Go systems**
 - Deterministic mechanics/electromagnetics simulation and engineering visualization
-- Embedded systems, UAVs, and hardware/software integration
-- Radar/Sonar DSP, estimation, and tracking
+- Radar/Sonar array processing, estimation, and tracking
 - Distributed/asynchronous backend infrastructure and secure sandboxing
-- Computer architecture and VLSI
 - Symbolic/numerical mathematics software
-- Applied AI/data systems
 
 ---
 
 ### Let's Connect
 
-I'm interested in opportunities involving **computer engineering, systems software, RTL/verification, simulation, embedded systems, backend infrastructure, robotics/UAVs, networking, hardware/software integration, signal processing, and high-performance software**.
+I'm interested in opportunities involving **computer engineering, systems software, RTL/verification, robotics, autonomous systems, simulation, embedded systems, backend infrastructure, networking, hardware/software integration, signal processing, and high-performance software**.
 
 [LinkedIn](https://www.linkedin.com/in/hamza-vaid/) · [GitHub](https://github.com/hamzavaid) · [Email](mailto:hamzavaid@gmail.com)
