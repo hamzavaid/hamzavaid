@@ -69,20 +69,6 @@ Hands-on team project building and flying a complete UAV from avionics and power
 <tr>
 <td width="50%" valign="top">
 
-### [IEEE at UCI Micromouse](https://ieee.ics.uci.edu/micromouse/mm_index.html)
-
-**Embedded C/C++ • PCB Design • Sensors • Autonomous Navigation**
-
-Year-long autonomous maze-solving robot project covering the full embedded hardware/software development cycle.
-
-- PCB and embedded-electronics development
-- Microcontroller programming, sensing, soldering, and physical integration
-- Autonomous navigation and maze-solving behavior
-- Iterative testing and preparation for Micromouse competition
-
-</td>
-<td width="50%" valign="top">
-
 ### Robotics at UCI — ZotBotics Level 2
 
 **6-Axis Robot Arm • Embedded Systems • 3D Printing • Automation**
